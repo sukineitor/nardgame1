@@ -16,23 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     })
   
-    // Verificar si los enlaces de los juegos son válidos
-    const playButtons = document.querySelectorAll(".play-btn")
-    playButtons.forEach((button) => {
-      fetch(button.href, { method: "HEAD" })
-        .then((response) => {
-          if (!response.ok) {
-            button.href = "#"
-            button.textContent = "No disponible"
-            button.classList.add("disabled")
-          }
-        })
-        .catch(() => {
-          button.href = "#"
-          button.textContent = "No disponible"
-          button.classList.add("disabled")
-        })
-    })
+
   })
   
   
